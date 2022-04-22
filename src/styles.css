@@ -1,0 +1,38 @@
+/* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+body,html {
+  font-family: 'Product Sans';
+  font-size: 16px;
+  height:100%
+}
+
+body {
+
+  background: #00d2ff;
+  background: -webkit-linear-gradient(to right, #abbaab, #e0dede);
+  background: linear-gradient(to right, #abbaab, #e0dede);
+  /* Full height */
+  height: 100%;
+}
+
+input[type=text] {
+  width: 50% !important;
+  position:relative;
+  left:25%;
+  padding: 12px 20px !important;
+  margin: 8px 0 !important;
+  /* margin:auto; */
+  display: inline-block !important;
+  border: 1px solid rgb(241, 238, 238) !important;
+  border-radius: 14px !important;
+  box-sizing: border-box !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+}
+
+input[type=text]:focus {
+  outline: none !important;
+  border: solid 1px goldenrod !important;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) !important;
+}

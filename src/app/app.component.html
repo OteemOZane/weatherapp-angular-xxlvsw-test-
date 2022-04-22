@@ -1,0 +1,52 @@
+
+  <div class="card" style=" margin-top: 100px;padding: 0px; ">
+    <div class="row">
+        <input
+          type="text" 
+          #place 
+          (keyup.enter)="getWeatherData(place.value)" 
+          style="color:red; text-align: center;font-size: 18px; font-weight: bolder;" 
+          placeholder="Location"
+        />   
+
+    </div>
+    <div class="chk">
+    <div class="card" style="width:100%;padding:0px;" *ngIf="msgExist">
+        <div class="grid-container" style="border-radius: 20px;" *ngIf="!error;">
+
+            <div 
+              class="item1" 
+              style="background: rgb(250, 185, 7);border-bottom-left-radius: 20px;">
+              {{weather_data.name}}
+              <br>
+              <img 
+                [src]=icon_source 
+                alt='weather_icon'
+              />
+            </div>
+
+            <div 
+              class="item2" 
+              style="background: rgb(181, 7, 250);color:white">
+              {{weather_data.main.temp - 273.15 | number:'1.0-0' }}&deg;C
+            </div>
+
+            <div 
+              class="item3" 
+              style="background: rgb(250, 7, 100);border-bottom-right-radius: 20px;color:white">
+              {{weather_data.main.humidity}} %
+            </div>
+        </div>
+
+        <div 
+          *ngIf="error" 
+          style="text-align: center; font-size: 18px;padding:20px;">
+            <p>
+              <strong>Please enter a VALID location</strong>
+            </p>
+        </div>
+    </div>
+  </div>
+
+
+

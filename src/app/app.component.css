@@ -1,0 +1,42 @@
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  transition: 0.3s;
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  padding: 40px;
+
+  /* background colour as gradient */
+  background: -webkit-linear-gradient(to right, #ff5e00, #e48202);
+  background: linear-gradient(to right, #ff5e00, #e48202);
+
+}
+
+/* Grid Css - source w3schools - referred  */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+
+.grid-container>div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.item1:hover,
+.item2:hover,
+.item3:hover {
+  box-shadow: 0px 24px 48px 0px rgba(239, 235, 235, 0.527);
+  transition: 0.3s;
+}
